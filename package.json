@@ -1,0 +1,19 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "burger App",
+  "main": "index.js",
+  "scripts": {
+    "test": "node start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Aboutique1/Burger-2-.git"
+  },
+  "author": "Am Webb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aboutique1/Burger-2-/issues"
+  },
+  "homepage": "https://github.com/Aboutique1/Burger-2-#readme"
+}
