@@ -10,6 +10,6 @@ var connection = mysql.createConnection({
 
 })
 
-export default connection;
+exports.default= connection;
 
 
