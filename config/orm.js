@@ -19,8 +19,8 @@ function insertOne (burgerType){
 
 }
 
-function updateOne (burgerType){
-    connection.query('update burgers set devoured = true where ("' + burgerType +'",false);', function (error, resuls, fields){
+function updateOne (burgerID){
+    connection.query('update burgers set devoured = true where id='+ burgerID +';', function (error, resuls, fields){
         if (error) throw error
         return
 
@@ -32,5 +32,8 @@ selectAll()
 
 insertOne("mcRib")
 insertOne("bigMac")
+updateOne(1)
+updateOne(2)
+updateOne(3)
 
 selectAll()
