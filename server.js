@@ -8,11 +8,6 @@ var app = express();
 var hbs = exphbs.create({
 
     
-    helpers: {
-        select: orm.select,
-        insert: orm.insert,
-        devour: orm.devour,
-    }
 });
  
  
