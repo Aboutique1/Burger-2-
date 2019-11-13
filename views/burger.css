@@ -1,3 +1,8 @@
 body{
- background-color: darkgoldenrod;
+ background-color: rgb(207, 166, 62);
+}
+
+.LeftList{
+    border: 3px solid #080808;
+    width: 17%;
 }

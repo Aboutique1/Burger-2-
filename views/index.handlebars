@@ -1,14 +1,36 @@
+
 <h1>
     Amber King
 </h1>
 
-<form onsubmit={{insert "The Works"}}>
+<form method="POST" action="/submit">
   <div class="form-group">
     <label>Burger Input</label>
-    <input type=" text " class="form-control" placeholder="Burger Input">
+    <input type=" text " class="form-control" placeholder="Burger Input" name="BurgerName">
     <small id="emailHelp" class="form-text text-muted">We'll never share your burger with anyone else.</small>
   </div>
-  
-  
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+  <ul class="LeftList">
+{{#each burgerList }}
+{{#unless devoured}}
+  <form method="POST" action="/click">
+    <input type="hidden" name="id" value={{id}}>
+    <li>{{id}}. {{burger_name}}<button type="submit" class="btn btn-primary">devour it</button></li>
+  </form>
+{{/unless}}
+{{/each}}
+</ul>
+
+<ul>
+{{#each burgerList }}
+{{#if devoured}}
+  <form method="POST" action="/click">
+    <input type="hidden" name="id" value={{id}}>
+    <li>{{id}}. {{burger_name}}</li>
+  </form>
+  {{/if}}
+{{/each}}
+</ul>
+  
