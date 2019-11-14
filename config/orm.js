@@ -27,7 +27,9 @@ module.exports.insert =function insertOne (burgerType){
 
 module.exports.devour =function updateOne (burgerID){
     connection.query('update burgers set devoured = true where id='+ burgerID +';', function (error, resuls, fields){
-        if (error) throw error
+        if (error) {
+            console.log(error)
+        }
         return
 
     })
