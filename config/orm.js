@@ -2,6 +2,7 @@ var connection = require('./connection').default
 require('dotenv').config()
 
 module.exports.select =function selectAll (callback){
+    
     connection.query('SELECT * FROM burgers;', function (error, results, fields) {
     if (error) throw error 
     callback(results)
